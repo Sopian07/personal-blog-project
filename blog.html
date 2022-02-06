@@ -1,0 +1,122 @@
+<html>
+  <head>
+    <title>Creating Blog Page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body style="padding-bottom: 50px; background-color: gainsboro; margin: 0px;"> 
+    <!-- NavBar -->
+<nav>
+  <div class="left-side">
+    <a href="index.html">
+      <img src="assets/logo.png" alt="logo" />
+    </a>
+    <ol>
+      <li>
+        <a href="home.html">Home</a>
+      </li>
+      <li>
+        <a href="blog.html" class="list-active">My Project</a>
+      </li>
+    </ol>
+    </div>
+    <div class="right-side">
+    <a href="contact.html"> Contact Me </a>
+  </div>
+</nav>
+
+    <!-- Blog -->
+    <!-- Form -->
+<div class="blog">
+    <div class="blog-form">
+      <div class="form-container">
+            <form onsubmit="addBlog(event)">
+                    <h1>ADD MY PROJECT</h1>
+                    <div>
+                        <label for="input-blog-title">Project Name</label>
+                        <input id="input-blog-title" />
+                    </div>
+                    <div style="display: flex;">
+                      <div class="start-date" style="padding-right: 20px;">
+                          <label>Start date</label>
+                          <input id="start-date" type="date" name="begin" placeholder="dd-mm-yyyy" value="" min="1997-01-01" max="2030-12-21">
+                      </div>
+                      <div class="end-date">
+                          <label>End date</label>
+                          <input id="end-date" type="date" name="begin" placeholder="dd-mm-yyyy" value="" min="1997-01-01" max="2030-12-21">
+                      </div>
+                    </div>
+                    <div>
+                        <label for="input-blog-content">Description</label>
+                        <textarea id="input-blog-content"></textarea>
+                    </div>
+                    <div style="margin-bottom: 10px;">
+                        <label>Technologies</label>
+                    </div>
+                    <div class="container-checkbox">
+                      <div class="wrap-checkbox">
+                          <input type="checkbox" name="jutsu" id="jutsu" value="nodejs.jpeg" />
+                          <label>Node JS</label>
+                      </div>
+                      <div class="wrap-checkbox">
+                          <input type="checkbox" name="jutsu" id="jutsu" value="reactjs.jpeg" />
+                          <label>React JS</label>
+                      </div>
+                    </div>
+                    <div class="container-checkbox">
+                      <div class="wrap-checkbox">
+                          <input type="checkbox" name="jutsu" id="jutsu" value="nextjs.png" />
+                          <label>Next JS</label>
+                      </div>
+                        <div class="wrap-checkbox">
+                          <input type="checkbox" name="jutsu" id="jutsu" value="typescript.png" />
+                          <label>TypeScript</label>
+                        </div>
+                    </div>
+                    <div>
+                        <label>Upload Image</label>
+                    <div class="input-blog-image-group">
+                        <label for="input-blog-image">
+                            <p>Attach File</p>
+                            <img src="assets/attach.png" alt="file" style="width: 4%;"/>
+                        </label>
+                        <input type="file" id="input-blog-image" hidden />
+                    </div>
+                  </div>
+                    <div class="button-group">
+                        <button>Submit</button>
+                    </div>
+            </form>
+        </div>
+    </div>
+    <hr class="line" />
+    <h2 style="text-align: center;margin-top: 40px;">MY PROJECT</h2>
+    <div id="contents" class="blog-list">      
+      <!-- dynamic content would be here -->
+        <div class="blog-list-item">
+          <div class="blog-image" width="100px;"><img src="assets/blog-img.png" alt="" width="100%" /></div>
+          <div class="blog-content">
+                <p><a href="blog-detail.html" target="_blank"><p>Pasar Coding di Indonesia Dinilai Masih Menjanjikan</p></a>
+                <p><div class="detail-blog-content">12 Jul 2021 22:30 WIB | Ichsan Emrald Alamsyah</div>
+                <p>Ketimpangan sumber daya manusia (SDM) di sektor digital masihmenjadi isu yang belum terpecahkan.</p>
+              <div class="blog-app">
+                <img src="assets/nodejs.jpeg" alt="" />
+                <img src="assets/reactjs.jpeg" alt="" />
+                <img src="assets/nextjs.png" alt="" />
+                <img src="assets/typescript.png" alt="" />
+              </div>
+              <div style="text-align: right;"><span style="color: grey; font-size: 15px;">1 hours ago</span></div>
+              <div class="btn-group">
+                <button class="btn-edit">Edit Post</button>
+                <button class="btn-delete">Delete Post</button>
+              </div>
+            </div>
+        </div>
+    </div>
+  </div>
+      <script src="blog.js"></script>
+
+
+
+</body>
+</html>
