@@ -112,6 +112,7 @@ function getDistanceTime(time){
   let dayDistance = distance / (miliseconds * secondInHour * hourInDay) //nyari satu hari berapa detik yang dalam kurung
 
   // dayDistance = 8.6
+  console.log(dayDistance)
 
   if(dayDistance >= 1){
     const time = Math.floor (dayDistance) + ` a day ago` //mathFlorr(pembulatan kebawah)
@@ -135,7 +136,8 @@ function getDayDifference (startDate,endDate) {
   const date1 = new Date (startDate)
   const date2 = new Date (endDate)
 
-  const diffTime = Math.abs(date2 - date1);
+  const diffTime = Math.abs(date2 - date1); 
+  // console.log (diffTime)
 
   const diffDay = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
     if (diffDay <30){
